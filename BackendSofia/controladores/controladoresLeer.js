@@ -38,6 +38,15 @@ const leerunHistorial = async(req,res)=>{
         res.status(500).send('Error al obtener el historial del paciente');
     }
 }
+const obtenerTurnos = async (req, res) => {
+    try {
+        const turnos = await Datos.readTurnos();
+        res.status(200).json(turnos);
+    } catch (error) {
+        console.error('Error al obtener turnos:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+};
 
 
 
@@ -46,5 +55,6 @@ export default {
     leerPacientes,
     leerSecretarias,
     leerHistorial,
-    leerunHistorial
+    leerunHistorial,
+    obtenerTurnos
 }

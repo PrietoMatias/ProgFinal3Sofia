@@ -23,7 +23,17 @@ const insertarPacientes = async (req,res)=>{
         res.status(500).json({error: 'Error interno del servidor'})
     }
 }
+const agregarTurno = async (req, res) => {
+    const { nombre, mail, fecha, hora } = req.body;
+    try {
+        const nuevoTurno = await Datos.insertarTurno({ nombre, mail, fecha, hora });
+        res.status(201).json(nuevoTurno);
+    } catch (error) {
+        console.error('Error al agregar turno:', error);
+        res.status(500).json({ error: 'Error interno del servidor' });
+    }
+}
 
 
 
-export default {insertarHistorial, insertarPacientes}
+export default {insertarHistorial, insertarPacientes, agregarTurno}

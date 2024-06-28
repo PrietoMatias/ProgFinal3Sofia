@@ -1,0 +1,155 @@
+.menu {
+    background: linear-gradient(#377FE6, #49E6DF, #D8BBE6);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+ }
+ .menu img{
+    width: 100px;
+    /* Mueve la imagen hacia la derecha */
+    margin-left:80%;
+     
+    /* height: auto; Mantener la proporción original */
+ 
+ }
+ .menu a{
+    color: rgb(117, 155, 158);
+    margin:auto ;
+    
+ }
+ 
+ .gif {
+    width: 100%;
+    height: 680px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black; /* Optional: to visualize the container */
+ }
+ 
+ .gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scale the image to cover the div */
+    object-position: center; /* Center the image */
+ }
+ 
+ .body {
+    background: linear-gradient(#377FE6, #49E6DF, #D8BBE6);
+ }
+ #acerca{
+    width: 110vh;
+    margin: auto;
+ }
+ .acerca h2, p{
+    color:rgb(233, 200, 200);
+    background-color:rgba(188, 143, 143, 0.329) ;
+    border-radius: 10%;
+   
+ }
+ .acerca h2{
+    font-size: 30px; /* Ajusta el tamaño de la fuente a 36 píxeles */
+ }
+ .acerca p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px; /* Ajusta el tamaño de la fuente a 36 píxeles */
+ }
+ .carrusel{
+    width: 70vh; 
+    margin: auto;
+   
+ }
+ 
+ 
+ .personal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuye los elementos con espacio alrededor */
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 20px;
+    height: auto;
+  }
+  
+  .personal .imagen-box {
+    width: calc(20% - 10px); /* Ajusta este valor según el tamaño deseado */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .personal .imagen-box img {
+    width: 100%;
+    height: auto; /* Ajusta la altura para que sea proporcional */
+    object-fit: cover;
+    transition: filter 0.5s ease-in-out;
+  }
+  
+  .personal .contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    color: #f8f8f8;
+  }
+  
+  .personal .contenido h3, 
+  .personal .contenido p {
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .personal:hover .imagen-box img {
+    filter: grayscale(1) brightness(0.4);
+  }
+  
+  .personal:hover .contenido h3,
+  .personal:hover .contenido p {
+    opacity: 1;
+  }
+  
+  .personal:hover .contenido p {
+    transform: translateY(0);
+  }
+  .personal p{
+    color:rgb(250, 250, 250);
+    background-color:rgba(188, 143, 143, 0.329) ;
+  }
+  .divisoria {
+    border-top: 1px solid rosybrown; /* Estilo de línea divisoria */
+    margin: 20px 0; /* Margen superior e inferior para separación */
+  }
+  .contacto{
+    background: linear-gradient( #49e6de06, #d8bbe699,rgba(188, 143, 143, 0.518),rgba(188, 143, 143, 0.329) )
+  }
+  
+
+  .contacto {
+    
+    height: 500px;
+    padding: 20px;
+  }
+  
+  .contacto h2 {
+    margin-bottom: 20px;
+  }
+  
+  .iconos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .maps, .call, .email, .whats, .ig {
+    width: 60px; /* Ajusta el tamaño según tus necesidades */
+    height: 60px; /* Ajusta el tamaño según tus necesidades */
+  }
+  
+  .maps img, .call img, .email img, .whats img, .ig img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  }
+  
+  

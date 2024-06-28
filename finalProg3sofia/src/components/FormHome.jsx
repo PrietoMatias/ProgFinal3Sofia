@@ -11,6 +11,7 @@ const FormHome = ({setAgregar}) => {
     };
 
     const handleSubmit = async (e)=>{
+      e.preventDefault()
         try {
        const response = await axios.post(`${BASE_URL}/insertar/paciente`, datos)
        const datas = response.data
@@ -27,14 +28,16 @@ const FormHome = ({setAgregar}) => {
     <input type="text" name="nombre" onChange={handleChange}/>
     <label htmlFor="apellido">Apellido</label>
     <input type="text" name="apellido" onChange={handleChange} />
-    <label htmlFor="nombre">Edad</label>
+    <label htmlFor="edad">Edad</label>
     <input type="number" name="edad" onChange={handleChange} />
     <label htmlFor="telefono">Telefono</label>
     <input type="text" name="telefono" onChange={handleChange} />
-    <label htmlFor="nombre">Mail</label>
+    <label htmlFor="mail">Mail</label>
     <input type="text" name="mail" onChange={handleChange} />
-    <button type="submit">Subir</button>
-    <button onClick={()=>setAgregar(false)}>Cancelar</button>
+    <label htmlFor="obrasocial">Obra Social</label>
+    <input type="text" name="obrasocial" onChange={handleChange} />
+    <button type="submit" className="btn color green">Subir</button>
+    <button onClick={()=>setAgregar(false)} className='btn color yellow'>Regresar</button>
     </form>
     </div>
     </>

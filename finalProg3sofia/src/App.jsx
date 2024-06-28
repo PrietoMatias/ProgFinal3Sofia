@@ -1,17 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
-import Enfermeras from "./pages/Enfermeras"
 import Turnos from './pages/Turnos'
+import Index from './pages/Index'
+import LoginAdmin from './pages/LoginAdmin'
 
 function App() {
   return (
     <>
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Home/>}  />
-      <Route path="/enfermeras" element={<Enfermeras/>} />
-      <Route path="/turnos" element={<Turnos/>} />
-      <Route path="/principal" element={<Home/>} />
+      <Route path="/" element={<Index/>}  />
+      <Route path="/LoginAdmin/turnos" element={<Turnos/>} />
+      <Route path="/LoginAdmin/principal" element={<Home/>} />
+      <Route path="/LoginAdmin" element={<LoginAdmin />} />
       </Routes>
     </BrowserRouter>
     </>
